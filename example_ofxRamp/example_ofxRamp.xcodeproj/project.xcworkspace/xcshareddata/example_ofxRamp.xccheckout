@@ -12,7 +12,7 @@
 	<dict>
 		<key>2DE9C8846D9375EAACFABA8963120E8E7719BAF5</key>
 		<string>https://github.com/openframeworks/openFrameworks.git</string>
-		<key>48A11DF5DEC4CF152E4759B28502CADB216FB70D</key>
+		<key>D7AE41714D1746FDAA5AECA90A5938680F47FB24</key>
 		<string>https://github.com/Larsberg/ofxRamp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
@@ -21,7 +21,7 @@
 	<dict>
 		<key>2DE9C8846D9375EAACFABA8963120E8E7719BAF5</key>
 		<string>../../../..</string>
-		<key>48A11DF5DEC4CF152E4759B28502CADB216FB70D</key>
+		<key>D7AE41714D1746FDAA5AECA90A5938680F47FB24</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -29,7 +29,7 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>48A11DF5DEC4CF152E4759B28502CADB216FB70D</string>
+	<string>D7AE41714D1746FDAA5AECA90A5938680F47FB24</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>48A11DF5DEC4CF152E4759B28502CADB216FB70D</string>
+			<string>D7AE41714D1746FDAA5AECA90A5938680F47FB24</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxRamp</string>
 		</dict>

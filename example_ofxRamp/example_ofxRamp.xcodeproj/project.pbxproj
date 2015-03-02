@@ -43,8 +43,6 @@
 
 /* Begin PBXFileReference section */
 		4D2788C3DD1B7985B459A032 /* ofxRamp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRamp.h; path = ../../../addons/ofxRamp/src/ofxRamp.h; sourceTree = SOURCE_ROOT; };
-		50EA6A3F1AA0F48A002E32EA /* Ramp3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Ramp3D.h; path = ../src/Ramp3D.h; sourceTree = "<group>"; };
-		50EA6A401AA0F49C002E32EA /* Ramp2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ramp2D.h; path = ../src/Ramp2D.h; sourceTree = "<group>"; };
 		BA90BE974A987DCE4FC8F8F9 /* Easings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Easings.h; path = ../../../addons/ofxRamp/src/Easings.h; sourceTree = SOURCE_ROOT; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* example_ofxRampDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example_ofxRampDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,8 +73,6 @@
 				BA90BE974A987DCE4FC8F8F9 /* Easings.h */,
 				4D2788C3DD1B7985B459A032 /* ofxRamp.h */,
 				F6973FDB1C56E2B847644980 /* Ramp.h */,
-				50EA6A401AA0F49C002E32EA /* Ramp2D.h */,
-				50EA6A3F1AA0F48A002E32EA /* Ramp3D.h */,
 			);
 			name = src;
 			sourceTree = "<group>";

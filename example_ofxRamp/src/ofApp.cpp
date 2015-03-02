@@ -80,15 +80,6 @@ void ofApp::setup()
 		ages[i] = ofRandom( -lifeSpan, lifeSpan );
 	}
 	
-	//3D ramp
-	Ramp::EaseFunc e0 = Ramp::Ease::Sinusoidal::In;
-	Ramp::EaseFunc e1 = Ramp::Ease::Sinusoidal::Out;
-	ramp3D.addValues(0, 0, 0, 0, 0, 0, e0, e0, e0);
-	
-	ramp3D.addValues(0, 0, 0, 10, 10, 10, e1, e1, e1);
-	
-	ramp3DItem = ramp3D.addValues(1, 1, 1, 5, 5, 5, e1, e1, e1 );
-	
 }
 
 //--------------------------------------------------------------
@@ -138,9 +129,6 @@ void ofApp::update()
 		ages[i]++;
 		if(ages[i] > lifeSpan)	ages[i] = 0;
 	}
-	
-	//3D ramp - reposition the ramp item's u, v & w
-	ramp3D.setUVW( ramp3DItem, sin(t) * 5 + 5, 5, cos(t) * 5 + 5 );
 }
 
 //--------------------------------------------------------------
@@ -191,35 +179,6 @@ void ofApp::draw()
 		
 		ofDrawCircle( position, radius );
 	}
-	
-	//3D ramp
-	easyCam.begin();
-	
-	float u, v, w;
-	
-	ofPushMatrix();
-	float spacing = 30;
-	ofTranslate(-5 * spacing, -5 * spacing, -5 * spacing);
-
-	for(int i=0; i<=10; i++)
-	{
-		for (int j=0; j<=10; j++)
-		{
-			for(int k=0; k<=10; k++)
-			{
-				ramp3D.getValues(i, j, k, u, v, w);
-				
-				ofSetColor( ofFloatColor( u, v, w ) );
-				
-				float scl = min(u, min(v, w) ) * spacing * 2;
-				
-				ofDrawBox( i * spacing, j * spacing, k * spacing, scl, scl, scl );
-			}
-		}
-	}
-	ofPopMatrix();
-	
-	easyCam.end();
 	
 	ofPopStyle();
 }

@@ -31,11 +31,4 @@ class ofApp : public ofBaseApp{
 	vector<ofVec3f> pos;
 	vector<float> ages;
 	ofxRamp<float> radiusRamp;
-	
-	//multidimensional ramps are kind of weird
-	ofxRamp2D<float> ramp2D;
-	ofxRamp3D<float> ramp3D;
-	ofxRampItem3D<float> ramp3DItem;
-	
-	ofEasyCam easyCam;
 };
