@@ -91,6 +91,15 @@ namespace Ramp
 			return rampItem;
 		}
 		
+		void remove( shared_ptr< RampItem<T> > rampItem)
+		{
+			auto it = find( values.begin(), values.end(), rampItem );
+			if(it != values.end())
+			{
+				values.erase( it );
+			}
+		}
+		
 		//set the u position of a ramp item
 		shared_ptr< RampItem<T> > setU( shared_ptr< RampItem<T> > item, float u )
 		{
