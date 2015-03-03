@@ -12,17 +12,14 @@ void ofApp::setup()
 	colorRamp.addValuePtr( &c1, .5, Ramp::Ease::Smoother );
 	colorRamp.addValuePtr( &c2, 1, Ramp::Ease::Smoother );
 	
-	colorImg.allocate(100, 12, OF_IMAGE_COLOR_ALPHA );
+	colorImg.allocate(100, 1, OF_IMAGE_COLOR_ALPHA );
 	
 	colorPixels = colorImg.getPixels();
 	
 	for(int i=0; i<colorPixels.getWidth(); i++)
 	{
 		auto c = colorRamp.getValue( ofMap(i, 0, colorPixels.getWidth()-1, 0, 1) );
-		for(int j=0; j<colorPixels.getHeight(); j++)
-		{
-			colorPixels.setColor( i, j, c );
-		}
+		colorPixels.setColor( i, 0, c );
 	}
 	colorImg.setFromPixels( colorPixels );
 	
@@ -31,16 +28,13 @@ void ofApp::setup()
 	greyRamp.addValue( ofFloatColor(0,0,0,1), .8 );
 	greyRampItem = greyRamp.addValue( ofFloatColor(1,1,1,1), .5);
 	
-	greyImg.allocate(100, 2, OF_IMAGE_COLOR_ALPHA);
+	greyImg.allocate(100, 1, OF_IMAGE_COLOR_ALPHA);
 	
 	greyPixels = greyImg.getPixels();
 	for(int i=0; i<greyPixels.getWidth(); i++)
 	{
 		auto c = greyRamp.getValue( i / (greyPixels.getWidth() - 1) );
-		for(int j=0; j<greyPixels.getHeight(); j++)
-		{
-			greyPixels.setColor( i, j, c );
-		}
+		greyPixels.setColor( i, 0, c );
 	}
 	
 	
@@ -97,28 +91,21 @@ void ofApp::update()
 	for(int i=0; i<colorPixels.getWidth(); i++)
 	{
 		ofColor c = colorRamp.getValue( ofMap(i, 0, colorPixels.getWidth()-1, 0, 1) );
-		
-		for(int j=0; j<colorPixels.getHeight(); j++)
-		{
-			colorPixels.setColor( i, j, c );
-		}
+		colorPixels.setColor( i, 0, c );
 	}
 	colorImg.setFromPixels( colorPixels );
 	
 	
 	//update the grey ramp texture
 	//	we stored a pointer( "ofxRampItem" ) that we can use to change the u position of a value
+	
 	greyRamp.setU( greyRampItem, sin(ofGetElapsedTimef()) * .5 + .5 );
 	
 	//	update the texture
 	for(int i=0; i<greyPixels.getWidth(); i++)
 	{
 		ofFloatColor c = greyRamp.getValue( ofMap(i, 0, greyPixels.getWidth()-1, 0, 1) );
-		
-		for(int j=0; j<greyPixels.getHeight(); j++)
-		{
-			greyPixels.setColor( i, j, c );
-		}
+		greyPixels.setColor( i, 0, c );
 	}
 	greyImg.setFromPixels( greyPixels );
 	
